@@ -1,7 +1,7 @@
 # TEMA 2.
-# Scrieti un program ce va numara cate caractere are un sir de caractere
-# dat de utilizator. Aceasta numarare sa se realizeze cu ajutorul unui for
-# fara a utiliza len(). La final afisati rezultatul
+# Scrieți un program ce va număra câte caractere are un șir de caractere
+# dat de utilizator. Această numărare să se realizeze cu ajutorul unui for
+# fără a utiliza len(). La final afișați rezultatul
 text = input("Introdu un text oarecare: ")
 lungime_text = 0
 for _ in text:
