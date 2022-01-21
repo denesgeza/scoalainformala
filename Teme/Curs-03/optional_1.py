@@ -1,5 +1,5 @@
 # TEMA 1.
-# Realizati comportamentul functiei append() utilizand functia insert().
+# Realizați comportamentul funcției append() utilizând funcția insert().
 my_first_list = [1, 2, 3, 4, 5]
 my_second_list = [1, 2, 3, 4, 5]
 
