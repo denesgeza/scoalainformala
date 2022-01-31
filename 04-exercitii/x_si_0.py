@@ -89,34 +89,3 @@ while None in lista:
             break
         else:
             print('Ai pierdut!')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print(lista)
-# """
-# Creati un program ce are ca scop crearea jocului X si 0 in care un participant este uman si celalalt este un robot.
-#
-# De asemenea, pentru alegerea unei casute libere de catre masina/robot sau de catre om aveti in vedere urmatoarele:
-#
-# • intrarile sunt de la 1 la 9 astfel: 1|2|3 4| 5|6 7|8|9
-#
-# • pozitia 5 este cea mai vanata
-#
-# • pozitia 1 sau 3 sau 7 sau 9 reprezinta optiunea a doua in cerintele unei masini.
-#
-# Prima valoare disponibila dintre acestea va fi marcata cu “O” de catre masina/robot
-#
-# • In cazul in care toate acestea sunt ocupate se incearca prima valoare ramasa libera dintre 2,4,6,8
-#
-# """
