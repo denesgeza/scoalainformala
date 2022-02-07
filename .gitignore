@@ -130,3 +130,7 @@ dmypy.json
 
 # Pycharm
 .idea
+
+# Note
+questions.txt
+TODOlist
