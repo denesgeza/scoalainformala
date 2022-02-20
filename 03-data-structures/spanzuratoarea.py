@@ -18,7 +18,7 @@ while numar_incercari <= 7:
                 lista_cuvant[index] = litera
     else:
         lista_litere_incercate.append(litera)
-        print(f'Litera nu exista, deja ai incercat urmatoarele litere {",".join(lista_litere_incercate}')
+        print(f'Litera nu exista, deja ai incercat urmatoarele litere {",".join(lista_litere_incercate)}')
         print(f'Mai ai {7 - numar_incercari} incercari')
         if litera not in lista_litere_incercate:
             numar_incercari += 1

@@ -15,4 +15,4 @@ def filter_vocale(letter):
     return True if letter in vocale else False
 
 filtrare_vocale = filter(filter_vocale, litere)
-print(filtrare_vocale)
+print(list(filtrare_vocale))
