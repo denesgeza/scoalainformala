@@ -29,9 +29,8 @@
 def verifica_luna(luna):
     """Verifica daca numărul de luni este mai mic sau egal cu 12."""
     if luna > 12:
-        return False
-    else:
-        return True
+        return "Luna este greșită!"
+    return True
 
 
 def verifica_an(an):
@@ -45,12 +44,9 @@ def verifica_an(an):
         if an_cnp % 100 == 0:
             if an_cnp % 400 == 0:
                 return True
-            else:
-                return False
-        else:
-            return True
-    else:
-        return False
+            return False
+        return True
+    return False
 
 
 def verifica_ziua(luna, zi, an):
@@ -63,28 +59,30 @@ def verifica_ziua(luna, zi, an):
         # daca e an bisect
         if verifica_an(an):
             if zi > 29:
-                return False
-            else:
-                return True
+                return "Ziua este greșită!"
+            return True
         else:
             if zi > 28:
-                return False
-            else:
-                return True
+                return "Ziua este greșită!"
+            return True
     # daca pică într-o luna cu 30 de zile
     elif luna in luna_30_zile:
         if zi > 30:
-            return False
-        else:
-            return True
+            return "Ziua este greșită!"
+        return True
     # daca pica într-o luna cu 31 de zile
     elif luna in luna_31_zile:
         if zi > 31:
-            return False
-        else:
-            return True
-    else:
-        return False
+            return "Ziua este greșită!"
+        return True
+    return False
+
+
+def nnn(cnp):
+    # https: // stackoverflow.com / questions / 6869999 / fixed - width - number - formatting - python - 3
+    if cnp[9:12] in ["%03d" % i for i in range(1, 1000)]:
+        return True
+    return False
 
 
 def cifra_de_control(cnp):
@@ -106,38 +104,37 @@ def cifra_de_control(cnp):
     # altfel cifra de control este egală cu restul
     if rest == int(cnp[-1]):
         return True
-    else:
-        return False
+    return "Cifra de control este greșită!"
 
 
 def verifica_judet(judet):
     """Verifica daca județul din CNP este valid. \n
        Returnează True sau False"""
-    if int(judet) in range(46) or int(judet) == 51 or int(judet) == 52:
-        return True
-    else:
-        return False
+    if int(judet) in range(47) or int(judet) == 51 or int(judet) == 52:
+        return "Județul este greșit"
+    return False
 
 
 def cnp_validator():
     """Verifica daca un cnp introdus este valid."""
     cnp = input("Introduceți cnp-ul: ")
-    sex = int(cnp[0])
-    an = int(cnp[1:3])
-    luna = int(cnp[3:5])
-    zi = int(cnp[5:7])
-    judet = cnp[7:9]
+    if cnp.isdigit():
+        sex = int(cnp[0])
+        an = int(cnp[1:3])
+        luna = int(cnp[3:5])
+        zi = int(cnp[5:7])
+        judet = cnp[7:9]
 
     # verificăm ca toate caracterele să fie numere
     for char in cnp:
         if not char.isnumeric():
-            print("cnp invalid")
+            return "CNP invalid"
 
     # verificăm ca lungimea sa fie 13, sexul sa nu fie 0 :), dacă data este introdusă corect și cifra de control
-    if len(cnp) == 13 and sex != 0 and verifica_luna(int(luna)) and verifica_ziua(zi=zi, luna=luna, an=an) and cifra_de_control(cnp) and verifica_judet(judet):
-        print("cnp corect!")
-    else:
-        print("cnp invalid")
+    if len(cnp) == 13 and sex != 0 and verifica_luna(int(luna)) and verifica_ziua(zi=zi, luna=luna, an=an) and cifra_de_control(cnp) and verifica_judet(judet) and nnn(cnp):
+        return "CNP valid!"
+    return "CNP invalid"
 
 
-cnp_validator()
+if __name__ == '__main__':
+    print(cnp_validator())
