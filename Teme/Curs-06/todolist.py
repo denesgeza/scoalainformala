@@ -185,7 +185,7 @@ def sort_option():
                 break
             else:
                 print('That is not a valid option, try again... ')
-        except Exception:
+        except ValueError:
             print('That is not a valid option, try again... ')
     return option
 
@@ -247,7 +247,7 @@ def edit_task():
     df = pd.read_csv('tasks.csv', names=['Task', 'Date', 'Name', 'Category'])
     index = df.index[df['Task'] == task_to_edit]
     df.loc[index, 'Task'] = new_value
-    df.to_csv('tasks.csv', header=False, index=False)
+    return df.to_csv('tasks.csv', header=False, index=False)
 
 
 def delete_task():
@@ -263,29 +263,27 @@ def delete_task():
     df = pd.read_csv('tasks.csv', names=['Task', 'Date', 'Name', 'Category'])
     # df.drop(df.index[df['Task'] == task_to_delete]) => nu merge!! to debug
     df = df[df.Task != task_to_delete]
-    df.to_csv('tasks.csv', header=False, index=False)
+    return df.to_csv('tasks.csv', header=False, index=False)
 
 
 def check_choice(choice):
     if choice == 1:
-        print(list_tasks())
+        return list_tasks()
     elif choice == 2:
-        print(filter_tasks())
+        return filter_tasks()
     elif choice == 3:
         option = sort_option()
-        print(sort_tasks(option))
+        return sort_tasks(option)
     elif choice == 4:
         # 4. Adăugarea unui nou task în lista inițială
-        task_input()
+        return task_input()
     elif choice == 5:
-        edit_task()
+        return edit_task()
     elif choice == 6:
-        delete_task()
+        return delete_task()
     elif choice == 7:
-        set_categories()
-    else:
-        print('Good bye')
-        exit()
+        return set_categories()
+    return exit()
 
 
 def todo_app():
