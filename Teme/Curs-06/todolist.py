@@ -116,8 +116,8 @@ def options():
 
 
 def list_tasks():
-    table = PrettyTable()
     """Listează task-urile salvate."""
+    table = PrettyTable()
 
     # 1. Listare date: în afișarea inițială a datelor se realizează o sortare în funcție de categorie.
     tasks = read_lines()
@@ -268,12 +268,12 @@ def delete_task():
 
 def check_choice(choice):
     if choice == 1:
-        return list_tasks()
+        return print(list_tasks())
     elif choice == 2:
-        return filter_tasks()
+        return print(filter_tasks())
     elif choice == 3:
         option = sort_option()
-        return sort_tasks(option)
+        return print(sort_tasks(option))
     elif choice == 4:
         # 4. Adăugarea unui nou task în lista inițială
         return task_input()

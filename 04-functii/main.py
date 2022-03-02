@@ -4,7 +4,7 @@ def functia_mea(param_1):
     pass
 
 
-def suma(a: int, b: int, c: int = 0) ->(int, int):
+def suma(a: int, b: int, c: int = 0) -> (int, int):
     """
 
     :param a: Primul parametru
