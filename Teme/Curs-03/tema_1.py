@@ -9,8 +9,14 @@
 def my_sum(*args):
     result = 0
     for arg in args:
-        if isinstance(arg, int):
-            result += arg
+        try:
+            if isinstance(arg, int):
+                result += arg
+        except TypeError:
+            continue
+        except ValueError:
+            continue
+       
     return result
 
 
@@ -22,7 +28,7 @@ def my_sum_2(*args):
         except ValueError:
             pass
         except TypeError:
-            pass
+            continue
         else:
             result += value
     return result

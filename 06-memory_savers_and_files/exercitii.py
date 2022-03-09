@@ -28,25 +28,25 @@ def f():
     return x
 
 
-print(x)
-print(f())
+print('1.', x)
+print('2.', f())
 
 x = [1, 2, 3, 4]
-print(x[-1:])
+print('3.', x[-1:])
 
 a = [1, 2, 3, 4]
 b = [4, 5]
-print(a + b * 3)
+print('4.', a + b * 3)
 
 def exercitiu(i):
     for i in range(i):
         return i
 
 x = exercitiu(3)
-print(x)
+print('5.', x)
 
 def func(*args):
     return 3 + len(args)
 
 
-print(func(4, 4, 4))
+print('6.', func(4, 4, 4))
