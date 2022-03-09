@@ -31,6 +31,7 @@ b = [4, 5]
 print('5.', a + b * 3)
 
 x = [1, 2, 3, 4]
+
 print('6.', x[-1:])
 
 x = [0, 1, [2]]
@@ -49,7 +50,7 @@ x = exercitiu8(3)
 print('8.', x)
 
 a = range(10)
-y = [x*x for x in a if x%2 == 0]
+y = [x * x for x in a if x % 2 == 0]
 print('9.', y)
 
 
@@ -104,7 +105,7 @@ print('16.', func(4, 4, 4))
 # count = (3, 2, 5, 4)
 # while len(count) < 5:
 #     count0 = count[0] + 1
-    # print('Hello Geek')
+#     print('Hello Geek')
 
 
 def ex(var):
@@ -117,3 +118,78 @@ def ex(var):
 
 
 print('18.', ex(20))
+
+
+def f(a, list=[]):
+    for i in range(a):
+        list.append(i*i)
+    print(list)
+
+f(3)
+f(2, [1, 2, 3])
+f(2)
+
+
+class ClasaMea:
+
+    def Met1(self, a):
+        global var1
+        var1 = a
+
+
+obj = ClasaMea()
+obj.Met1('Salut Lume')
+
+class Test123():
+    def __str__(self) -> str:
+        self.x = 77777
+        return str(self.x)
+
+obj_test123 = Test123()
+print('23.', obj_test123)
+
+class X(object):
+    def Ad(self, a, b, c):
+        self.a = a
+        self.b = b
+        return self.a + self. b
+
+obiect1 = X()
+print('24.', obiect1.Ad(1, 2, 3))
+
+
+class test123():
+    def rezultat(self):
+        self.x = 77777
+
+
+# # ???
+# obj_test124 = test123()
+# a = obj_test124.rezultat()
+#
+# test123.y = 77777
+# print('25.', test123.y)
+# # print('25.', abc)
+#
+#
+# class Y(object):
+#     def Ad(self):
+#         print('Imi place Python')
+#
+# obiect111 = X()
+# print(obiect111)
+
+# class Tsdf1234():
+#     def __init__(self, x):
+#         self.x = x
+#
+# asdf = Tsdf1234()
+
+class Test1():
+    dinamic = 'ceva'
+    def Met1(self):
+        return Test1.dinamic.upper()
+
+obj = Test1()
+obj.Met1()
+
