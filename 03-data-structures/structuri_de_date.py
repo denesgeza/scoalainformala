@@ -26,6 +26,7 @@ print(dictionar['cheie'])
 dictionar.update({'cheie': 3})
 # daca o cheie exista de doua ori, o printeaza doar pe a 2a
 # returneaza valorile
+print(dictionar.items())
 print(dictionar.keys())
 
 # returneaza valorile
