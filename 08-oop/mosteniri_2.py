@@ -34,7 +34,7 @@ class SubClass(Clasa3, SuperClass):
     def prima_metoda(self):
         return 4
     #
-    def __str__(self):                  # daca este si in Sub, nu mai acceseaza __str__ din Super
+    def __str__(self):                   # daca este si in Sub, nu mai acceseaza __str__ din Super
         return f'Nume: {self.name}'
 
 
