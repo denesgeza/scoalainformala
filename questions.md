@@ -15,7 +15,6 @@
 - flask blueprints?  
 - import error: no module named ...  
 - os.path.join ....expanduser.... cum se creaza caile
-- cum se creaza caile la sqlite: eg /// 
 - docker? avantaje/de ce ar trebui folosit
 - gunicorn?
 
