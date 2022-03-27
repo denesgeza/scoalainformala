@@ -38,7 +38,7 @@ class Izatori(Util):
 
 
     def __str__(self):
-        return "Utilizatorul: `{}` are userul: `{}` si parola: `{}`".format(self.name, self.user, self.password)
+        return "Utilizatorul: `{0.name}` are userul: `{0.user}` si parola: `{0.password}`".format(self)
 
 
 class Utilizatori(Izatori, Util):
@@ -68,7 +68,7 @@ class Utilizatori(Izatori, Util):
         return set(users)
 
     def __str__(self):
-        return "Utilizatorul: `{}` are userul: `{}` si parola: `{}`".format(self.name, self.user, self.password)
+        return "Utilizatorul: `{0.name}` are userul: `{0.user}` si parola: `{0.password}`".format(self)
 
 
 ionut = Util("Ionut")
@@ -76,11 +76,11 @@ liviu = Izatori('Liviu', "liviu", "parola_liviu")
 stefan = Utilizatori("Stefan", "stefan", "parola_stefan")
 george = Utilizatori("George", "george", "parola_george")
 # print(ionut)
-# print(liviu)
+print(liviu)
 # print(stefan)
-# print(george)
+print(george)
 # print(Util.nr_obiecte)
-# print(Izatori.nr_obiecte)
+print(Izatori.nr_obiecte)
 # print(Utilizatori.nr_obiecte)
 useri = Utilizatori._useri(stefan)
 print(useri)
