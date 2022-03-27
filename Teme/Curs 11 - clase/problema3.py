@@ -46,9 +46,10 @@ class Utilizatori(Izatori, Util):
     def __init__(self, name, user, password):
         super().__init__(name, user, password)
 
-    def _parole(self):
+    @classmethod
+    def _parole(cls):
         parole_useri = []
-        for i in self.nr_obiecte:
+        for i in cls.nr_obiecte:
             try:
                 if i['password']:
                     parole_useri.append(i['password'])
@@ -56,10 +57,10 @@ class Utilizatori(Izatori, Util):
                 pass
         return set(parole_useri)
 
-    # @staticmethod
-    def _useri(self):
+    @classmethod
+    def _useri(cls):
         users = []
-        for i in self.nr_obiecte:
+        for i in cls.nr_obiecte:
             try:
                 if i['user']:
                     users.append(i['user'])
@@ -76,14 +77,16 @@ liviu = Izatori('Liviu', "liviu", "parola_liviu")
 stefan = Utilizatori("Stefan", "stefan", "parola_stefan")
 george = Utilizatori("George", "george", "parola_george")
 # print(ionut)
-print(liviu)
+# print(liviu)
 # print(stefan)
-print(george)
+# print(george)
 # print(Util.nr_obiecte)
-print(Izatori.nr_obiecte)
+# print(Izatori.nr_obiecte)
 # print(Utilizatori.nr_obiecte)
-useri = Utilizatori._useri(stefan)
+
+# Am rezilvat cu classmethod
+useri = Utilizatori._useri()
 print(useri)
 
-parole = Utilizatori._parole(stefan)
+parole = Utilizatori._parole()
 print(parole)
