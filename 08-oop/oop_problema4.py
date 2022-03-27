@@ -1,5 +1,5 @@
 class Calcul:
-    def __init__(self, a=1, b=2, c=3, d=4 ):
+    def __init__(self, a=1, b=2, c=3, d=4):
         self.a = a
         self.b = b
         self.c = c
@@ -16,12 +16,12 @@ class Calcul:
 
 obiect = Calcul()
 print(obiect)
-obiect2=Calcul(5,6,7,8)
+obiect2=Calcul(5, 6, 7, 8)
 print(obiect2)
-obiect3 = Calcul("x","y","z",2)
+obiect3 = Calcul("x", "y", "z", 2)
 print(obiect3)
-obiect4 = Calcul(9,2)
+obiect4 = Calcul(9, 2)
 print(obiect4)
     
-
+print(Calcul.verificare(obiect4))
 

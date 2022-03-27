@@ -15,6 +15,7 @@ def text(sir):
 text_p = decorator(text)
 # print(text_p('Salut'))
 
+
 class Dog:
 
     def __init__(self, nume):
