@@ -15,21 +15,7 @@ class Izatori(Util):
         super().__init__(name)
         self.user = user
         self.password = password
-        # for i in self.nr_obiecte:
-        #     try:
-        #         if i['password'] == self.password:
-        #             if i['nume'] == self.name:
-        #                 i['user'] = self.user
-        #                 i['password'] = self.password
-        #             else:
-        #                 self.nr_obiecte.append({
-        #                     'nume': self.name,
-        #                     'user': self.user,
-        #                     'password': self.password})
-        #         else:
-        #             continue
-        #     except KeyError:
-        #         continue
+
         self.nr_obiecte.append({
             'nume': self.name,
             'user': self.user,
@@ -47,7 +33,7 @@ class Utilizatori(Izatori, Util):
         super().__init__(name, user, password)
 
     @classmethod
-    def _parole(cls):
+    def __parole(cls):
         parole_useri = []
         for i in cls.nr_obiecte:
             try:
@@ -58,7 +44,7 @@ class Utilizatori(Izatori, Util):
         return set(parole_useri)
 
     @classmethod
-    def _useri(cls):
+    def __useri(cls):
         users = []
         for i in cls.nr_obiecte:
             try:
@@ -76,17 +62,9 @@ ionut = Util("Ionut")
 liviu = Izatori('Liviu', "liviu", "parola_liviu")
 stefan = Utilizatori("Stefan", "stefan", "parola_stefan")
 george = Utilizatori("George", "george", "parola_george")
-# print(ionut)
-# print(liviu)
-# print(stefan)
-# print(george)
-# print(Util.nr_obiecte)
-# print(Izatori.nr_obiecte)
-# print(Utilizatori.nr_obiecte)
 
-# Am rezilvat cu classmethod
-useri = Utilizatori._useri()
-print(useri)
+print(Utilizatori.__dict__)
 
-parole = Utilizatori._parole()
-print(parole)
+# Afiseaza o metoda privata
+print(george._Utilizatori__parole())
+print(george._Utilizatori__useri())
