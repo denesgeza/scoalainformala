@@ -7,17 +7,17 @@
     - dump
   - care ar fi avantajele folosirii MySQL fata de sqlite3
     - user si parola
+- Cum pot crea variabile dinamic?  ... de studiat.. preferabil de evitat;
 
 
 - Generatoare --> yield?  , cand merita folosit generatoare v loop std?
 - asyncio  --> vedem
 - how to register dtale to flask   --> ?
-- flask blueprints?  
-- import error: no module named ...  
-- os.path.join ....expanduser.... cum se creaza caile
+- flask blueprints?  --> ?
 - docker? avantaje/de ce ar trebui folosit
 - gunicorn?
+- stash/patch/shelve...rebase --> mod de aplicare ?
+- apexcharts --> update table based on input --> React ..node --> how to apply in production build?
 
 
 
-- Cum pot crea variabile dinamic?  ... de studiat
