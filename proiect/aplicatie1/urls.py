@@ -6,4 +6,5 @@ app_name = 'locations'
 urlpatterns = [
     path('', views.LocationsView.as_view(), name='lista_locatii'),
     path('adaugare/', views.CreateLocationView.as_view(), name='adauga'),
+    path('<int:pk>/update/', views.UpdateLocationView.as_view(), name='modifica'),
     ]

@@ -16,7 +16,7 @@
                     <td>{{ forloop.counter }}</td>
                     <td>{{ item.city }}</td>
                     <td>{{ item.country }}</td>
-                    <td></td>
+                    <td><a href="{% url 'locations:modifica' item.id %}" class="btn btn-success">Modifica</a></td>
                 </tr>
             {% endfor %}
         </tbody>
