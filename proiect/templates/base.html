@@ -45,6 +45,9 @@
                         <li><a class="dropdown-item" href="{% url 'companies:inactive' %}">Inactive</a></li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'userprofile:utilizator_nou' %}">Add user</a>
+                </li>
             </ul>
 
         </div>
@@ -56,7 +59,7 @@
 </nav>
 
 
-
+<br>
 {% block content %}
 {% endblock %}
 {#JS#}
