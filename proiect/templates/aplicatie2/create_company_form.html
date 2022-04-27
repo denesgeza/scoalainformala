@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <form class="form-group" method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="row form-group">
+                    <div class="form-control-label">{{ field.label }}</div>
+                    <div class="form-control">{{ field }}</div>
+                </div>
+            {% endfor %}
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary form-control">Add Company</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
