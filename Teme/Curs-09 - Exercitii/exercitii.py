@@ -78,7 +78,7 @@ class BankAccount:
 a = BankAccount()
 print('11.', a.deposit(100))
 
-# print('12.', 'foo' + 2) # canot concatenate str and int
+# print('12.', 'foo' + 2) # cannot concatenate str and int
 
 try:
     print('a')
@@ -106,6 +106,7 @@ print('16.', func(4, 4, 4))
 # while len(count) < 5:
 #     count0 = count[0] + 1
 #     print('Hello Geek')
+# loop infinit cu Hello Greek
 
 
 def ex(var):
@@ -118,18 +119,26 @@ def ex(var):
 
 
 print('18.', ex(20))
+# Current letter : g
+# 10
 
 
 def f(a, list=[]):
     for i in range(a):
         list.append(i*i)
     print(list)
-
+print('20.')
 f(3)
 f(2, [1, 2, 3])
 f(2)
 
+#### 21.
+list = ['1', '2', '3', '4', '5']
+print('21.', list[12:])
+# empty list
 
+
+#### 22.
 class ClasaMea:
 
     def Met1(self, a):
@@ -140,6 +149,10 @@ class ClasaMea:
 obj = ClasaMea()
 obj.Met1('Salut Lume')
 
+# Nu returneaza nimic, stocheaza var1='Salut Lume' in var1
+
+
+#### 23.
 class Test123():
     def __str__(self) -> str:
         self.x = 77777
@@ -147,43 +160,71 @@ class Test123():
 
 obj_test123 = Test123()
 print('23.', obj_test123)
+# 77777
 
+#### 24.
 class X(object):
     def Ad(self, a, b, c):
-        self.a = a
-        self.b = b
-        return self.a + self. b
+        return self.a + self.b + self.c
 
 obiect1 = X()
-print('24.', obiect1.Ad(1, 2, 3))
+# print('24.', obiect1.Ad(1, 2, 3))
+# self.a, self.b, self.c NU sunt atributele clasei X ==> error
 
-
+print('25.', 15*'-')
 class test123():
     def rezultat(self):
-        self.x = 77777
+        self.y = 77777
 
-
-# # ???
 # obj_test124 = test123()
-# a = obj_test124.rezultat()
-#
-# test123.y = 77777
-# print('25.', test123.y)
-# # print('25.', abc)
-#
-#
-# class Y(object):
-#     def Ad(self):
-#         print('Imi place Python')
-#
-# obiect111 = X()
-# print(obiect111)
+# print('25.', obj_test124.rezultat())
+test123 = test123()
+test123.y = 77777
+print('25.', test123.y) #--> nu exista atributul y in clasa test123
+print('25', type(test123))
 
+#### 26.
+print('26.', 15*'-')
+class X(object):
+    def Ad():
+        print('Imi place Python')
+
+obiect111 = X()
+print(obiect111)
+
+#### 27.
+# print('27.')
 # class Tsdf1234():
 #     def __init__(self, x):
 #         self.x = x
 #
 # asdf = Tsdf1234()
+
+# --> missing 1 required positional argument: 'x'
+
+#### 28.
+print('28.')
+
+#### 29.
+print('29.', 15*'-')
+class Test1():
+    def Met1(self):
+        self.unu = 'unu'
+        return self.unu
+class Test2(Test1):
+    def Met2(self):
+        self.unu = 'doi'
+        return self.unu
+class Test3(Test2):
+    def Met2(self):
+        self.doi = 'doi'
+
+obj = Test2()
+print('29.', obj.Met1(), obj.Met2())
+
+#### 30.
+print('30.', 15*'-')
+
 
 class Test1():
     dinamic = 'ceva'
@@ -191,5 +232,12 @@ class Test1():
         return Test1.dinamic.upper()
 
 obj = Test1()
-obj.Met1()
+print(obj.Met1())
 
+print(2//3)
+
+jjj= []
+print(str(jjj))
+
+__str__ = 3
+print(__str__)

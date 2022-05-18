@@ -1,3 +1,4 @@
+##### 1
 def function(new_list):
     length = len(new_list)
     temp_list = new_list[-1]
@@ -7,9 +8,9 @@ def function(new_list):
 
 
 param_list = [22, 11, 9, 44, 56]
-print(function(param_list))
+print('1.', function(param_list))
 
-
+##### 2
 def functie_2(lista):
     item = 1
     for x, y in enumerate(lista):
@@ -18,8 +19,10 @@ def functie_2(lista):
 
 
 lista = [1, 2, 3]
+# lista[1 + 1] = 3
 
-print(functie_2(lista))
+
+print('2.', functie_2(lista))
 
 x = 1
 

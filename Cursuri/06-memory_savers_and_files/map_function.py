@@ -5,6 +5,7 @@ def adunare(n):
 lista_numere_1 = [1, 2, 3, 4, 5]
 lista_numere_2 = [5, 6, 7, 8, 9, 10]
 rezultat = map(adunare, lista_numere_1)
+# print(rezultat)
 print(list(rezultat))
 
 rezultat_2 = map(lambda n: n + n, lista_numere_1)

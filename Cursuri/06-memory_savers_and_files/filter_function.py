@@ -10,6 +10,8 @@ iterator_numere_pare = filter(numere_pare, lista_numere)
 print(iterator_numere_pare)
 
 litere = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+
+
 def filter_vocale(letter):
     vocale = ['a', 'e', 'i']
     return True if letter in vocale else False

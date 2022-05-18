@@ -2,10 +2,10 @@ my_lambda = lambda x, y: x + y
 # denumire functie = lambda param1, param2: corp functie
 
 
-def my_lambda(x, y):
+def my_lambda2(x, y):
     return x + y
 
-my_sum = my_lambda(2, 4)
+my_sum = my_lambda2(2, 4)
 print(my_sum)
 
 
